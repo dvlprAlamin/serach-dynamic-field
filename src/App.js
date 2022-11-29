@@ -11,7 +11,7 @@ function App() {
   }, [])
 
   const addFieldHandler = (e) => {
-    if (e.key === "ArrowDown") {
+    if (e.key === "ArrowDown" && e.target.value !== "") {
       e.preventDefault();
       const newField = <Fragment>
         <input list={"country-list" + fields.length + 1} defaultValue={e.target.value} />
